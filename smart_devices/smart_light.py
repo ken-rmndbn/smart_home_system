@@ -1,4 +1,4 @@
-from base_device import SmartDevice
+from .base_device import SmartDevice
 
 class SmartLight(SmartDevice):
     def __init__(self, device_id: str, friendly_name: str) -> None:
