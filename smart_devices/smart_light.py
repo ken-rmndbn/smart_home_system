@@ -19,7 +19,9 @@ class SmartLight(SmartDevice):
 
     def turn_on(self) -> str:
         self.__is_powered = True
-        self.__brightness_percentage = 100
+        if self.__brightness_percentage == 0:
+            self.__brightness_percentage = 100
+
         return f"Success: Light '{self.friendly_name}' illuminated to {self.__brightness_percentage}%."
 
     def turn_off(self) -> str:
